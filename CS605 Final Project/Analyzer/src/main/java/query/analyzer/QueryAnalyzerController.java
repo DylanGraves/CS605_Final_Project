@@ -1,5 +1,6 @@
 package query.analyzer;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -34,4 +35,15 @@ public class QueryAnalyzerController {
     @FXML
     private Button SubmitButton;
 
+    @FXML
+    void clear(ActionEvent event) {
+        SQLTextField.clear();
+    }
+
+    @FXML
+    void submit(ActionEvent event) {
+
+    }
+
 }
+

@@ -21,8 +21,8 @@
          </font>
       </Label>
       <TextArea fx:id="SQLTextField" layoutX="31.0" layoutY="117.0" prefHeight="200.0" prefWidth="307.0" promptText="SQL query to be executed" />
-      <Button fx:id="SubmitButton" layoutX="105.0" layoutY="331.0" mnemonicParsing="false" text="Submit" />
-      <Button fx:id="ClearButton" layoutX="216.0" layoutY="331.0" mnemonicParsing="false" text="Clear" />
+      <Button fx:id="SubmitButton" layoutX="105.0" layoutY="331.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Button fx:id="ClearButton" layoutX="216.0" layoutY="331.0" mnemonicParsing="false" onAction="#clear" text="Clear" />
       <Label layoutX="610.0" layoutY="83.0" text="Results">
          <font>
             <Font name="Dubai Regular" size="18.0" />
