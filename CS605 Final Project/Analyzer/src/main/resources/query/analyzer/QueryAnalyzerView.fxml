@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!--        Needs to be implemented.-->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="query.analyzer.QueryAnalyzerController">
+   <children>
+      <Label layoutX="319.0" layoutY="14.0" text="Query Analyzer">
+         <font>
+            <Font name="Dubai Regular" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="89.0" text="Input SQL Query:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="SQLTextField" layoutX="31.0" layoutY="117.0" prefHeight="200.0" prefWidth="307.0" promptText="SQL query to be executed" />
+      <Button fx:id="SubmitButton" layoutX="105.0" layoutY="331.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="ClearButton" layoutX="216.0" layoutY="331.0" mnemonicParsing="false" text="Clear" />
+      <Label layoutX="610.0" layoutY="83.0" text="Results">
+         <font>
+            <Font name="Dubai Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="382.0" layoutY="135.0" text="Microsoft SQL Server">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="415.0" layoutY="238.0" text="Oracle DB">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="536.0" layoutY="135.0" text="Execution Time:">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="536.0" layoutY="238.0" text="Execution Time:">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="531.0" layoutY="160.0" text="Peak RAM Usage:">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="188.0" text="Peak CPU Usage:">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="531.0" layoutY="263.0" text="Peak RAM Usage:">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="288.0" text="Peak CPU Usage:">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="MicrosoftExecutionTimeLabel" layoutX="664.0" layoutY="135.0" text="... milliseconds">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="OracleExecutionTimeLabel" layoutX="664.0" layoutY="238.0" text="... milliseconds">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="MicrosoftPeakRAMLabel" layoutX="664.0" layoutY="160.0" text="... %">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="MircosoftPeakCPULabel" layoutX="664.0" layoutY="188.0" text="... %">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="OraclePeakRAMLabel" layoutX="664.0" layoutY="263.0" text="... %">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="OraclePeakCPULabel" layoutX="664.0" layoutY="288.0" text="... %">
+         <font>
+            <Font name="Dubai Regular" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
