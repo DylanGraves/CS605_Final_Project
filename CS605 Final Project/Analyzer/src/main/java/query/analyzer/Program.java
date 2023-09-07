@@ -17,8 +17,6 @@ public class Program extends Application {
         stage.show();
     }
 
-    // testing git
-
     public static void main(String[] args) {
         launch();
     }
