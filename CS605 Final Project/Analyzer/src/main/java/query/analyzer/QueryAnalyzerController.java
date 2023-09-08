@@ -30,6 +30,9 @@ public class QueryAnalyzerController {
     private Label OraclePeakRAMLabel;
 
     @FXML
+    private Label WarningLabel;
+
+    @FXML
     private TextArea SQLTextField;
 
     @FXML
