@@ -46,6 +46,7 @@ public class QueryAnalyzerController {
     @FXML
     void submit(ActionEvent event) {
 
+        // TODO add text to warning label if SQL Validator returns false.
     }
 
 }
