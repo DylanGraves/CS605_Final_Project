@@ -64,13 +64,13 @@ public class QueryAnalyzerController {
     void submit(ActionEvent event) {
         List<QueryDataProp> queryDataPropList = queryService.Execute();
 
-        MicrosoftExecutionTimeLabel.setText(Long.toString(queryDataPropList.get(0).ExecutionTimeMilliseconds()) + " milliseconds");
-        MicrosoftPeakRAMLabel.setText(String.format("%.2f", queryDataPropList.get(0).PeakRamUsage()) + "%");
-        MircosoftPeakCPULabel.setText(String.format("%.2f", queryDataPropList.get(0).PeakCpuUsage()) + "%");
+        MicrosoftExecutionTimeLabel.setText(Long.toString(queryDataPropList.get(1).ExecutionTimeMilliseconds()) + " milliseconds");
+        MicrosoftPeakRAMLabel.setText(String.format("%.2f", queryDataPropList.get(1).PeakRamUsage()) + "%");
+        MircosoftPeakCPULabel.setText(String.format("%.2f", queryDataPropList.get(1).PeakCpuUsage()) + "%");
 
-        OracleExecutionTimeLabel.setText(Long.toString(queryDataPropList.get(1).ExecutionTimeMilliseconds()) + " milliseconds");
-        OraclePeakRAMLabel.setText(String.format("%.2f", queryDataPropList.get(1).PeakRamUsage()) + "%");
-        OraclePeakCPULabel.setText(String.format("%.2f", queryDataPropList.get(1).PeakCpuUsage()) + "%");
+        OracleExecutionTimeLabel.setText(Long.toString(queryDataPropList.get(0).ExecutionTimeMilliseconds()) + " milliseconds");
+        OraclePeakRAMLabel.setText(String.format("%.2f", queryDataPropList.get(0).PeakRamUsage()) + "%");
+        OraclePeakCPULabel.setText(String.format("%.2f", queryDataPropList.get(0).PeakCpuUsage()) + "%");
 
         // TODO add text to warning label if SQL Validator returns false.
     }
