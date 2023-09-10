@@ -50,6 +50,14 @@ public class QueryAnalyzerController {
     @FXML
     void clear(ActionEvent event) {
         SQLTextField.clear();
+
+        MicrosoftExecutionTimeLabel.setText("... milliseconds");
+        MicrosoftPeakRAMLabel.setText("... %");
+        MircosoftPeakCPULabel.setText("... %");
+
+        OracleExecutionTimeLabel.setText("... milliseconds");
+        OraclePeakRAMLabel.setText("... %");
+        OraclePeakCPULabel.setText("... %");
     }
 
     @FXML
