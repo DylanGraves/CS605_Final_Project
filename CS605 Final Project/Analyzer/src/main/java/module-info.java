@@ -4,6 +4,7 @@ module query.analyzer {
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
+    requires jsqlparser;
 
     opens query.analyzer to javafx.fxml;
     exports query.analyzer;

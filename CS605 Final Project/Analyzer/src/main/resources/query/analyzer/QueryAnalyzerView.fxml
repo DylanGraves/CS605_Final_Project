@@ -98,6 +98,6 @@
             <Font name="Dubai Regular" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="WarningLabel" layoutX="388.0" layoutY="335.0" prefHeight="17.0" prefWidth="25.0" textFill="RED" />
+      <Label fx:id="WarningLabel" alignment="CENTER" layoutX="300.0" layoutY="335.0" prefHeight="17.0" prefWidth="201.0" textAlignment="CENTER" textFill="RED" />
    </children>
 </AnchorPane>

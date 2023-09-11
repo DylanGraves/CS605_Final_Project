@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import query.analyzer.DataAccessLayer.QueryDataProp;
+import query.analyzer.Validators.QueryAnalyzerViewValidator;
 
 import java.net.URL;
 import java.util.List;
@@ -62,17 +63,24 @@ public class QueryAnalyzerController {
 
     @FXML
     void submit(ActionEvent event) {
-        List<QueryDataProp> queryDataPropList = queryService.Execute();
+        QueryAnalyzerViewValidator validator = new QueryAnalyzerViewValidator(SQLTextField.getText());
 
-        MicrosoftExecutionTimeLabel.setText(Long.toString(queryDataPropList.get(1).ExecutionTimeMilliseconds()) + " milliseconds");
-        MicrosoftPeakRAMLabel.setText(String.format("%.2f", queryDataPropList.get(1).PeakRamUsage()) + "%");
-        MircosoftPeakCPULabel.setText(String.format("%.2f", queryDataPropList.get(1).PeakCpuUsage()) + "%");
+        if (validator.validate()) {
+            List<QueryDataProp> queryDataPropList = queryService.Execute();
 
-        OracleExecutionTimeLabel.setText(Long.toString(queryDataPropList.get(0).ExecutionTimeMilliseconds()) + " milliseconds");
-        OraclePeakRAMLabel.setText(String.format("%.2f", queryDataPropList.get(0).PeakRamUsage()) + "%");
-        OraclePeakCPULabel.setText(String.format("%.2f", queryDataPropList.get(0).PeakCpuUsage()) + "%");
+            MicrosoftExecutionTimeLabel.setText(Long.toString(queryDataPropList.get(1).ExecutionTimeMilliseconds()) + " milliseconds");
+            MicrosoftPeakRAMLabel.setText(String.format("%.2f", queryDataPropList.get(1).PeakRamUsage()) + "%");
+            MircosoftPeakCPULabel.setText(String.format("%.2f", queryDataPropList.get(1).PeakCpuUsage()) + "%");
 
-        // TODO add text to warning label if SQL Validator returns false.
+            OracleExecutionTimeLabel.setText(Long.toString(queryDataPropList.get(0).ExecutionTimeMilliseconds()) + " milliseconds");
+            OraclePeakRAMLabel.setText(String.format("%.2f", queryDataPropList.get(0).PeakRamUsage()) + "%");
+            OraclePeakCPULabel.setText(String.format("%.2f", queryDataPropList.get(0).PeakCpuUsage()) + "%");
+
+            WarningLabel.setText("");
+        }
+        else {
+            WarningLabel.setText("Error: Invalid SQL");
+        }
     }
 
 }
